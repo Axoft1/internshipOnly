@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  --point-width: 41px;
+  --point-height: 41px;
+}
+
+.wrapper {
+  min-width: 1280px;
+  max-width: 1920px;
+  margin: auto;
+}
+.map {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.map img {
+  height: 100%;
+  width: 100%;
+}
+.point {
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 20px;
+  height: var(--point-height);
+  transition: all 0.1s;
+}
+.point p {
+  display: block;
+  margin-left: var(--point-width);
+  margin-top: calc(var(--point-height) / 2 - 0.6rem);
+  color: white;
+  top: 20%;
+  left: 50%;
+}
+.point:hover {
+  opacity: 0.9;
+}
+
+.active {
+  --size: 10px;
+  display: inline;
+  background-image: url(./public/images/dash.svg);
+  background-size: var(--size);
+  background-repeat: no-repeat;
+  background-position: calc(var(--point-height) / 2 - var(--size) / 2);
+}
+.active p {
+    opacity: 1;
+}
+.notActive {
+    --size: 20px;
+    width: var(--point-width);
+    background-image: url(./public/images/plus.svg);
+    background-size: var(--size);
+    background-repeat: no-repeat;
+    background-position: calc(var(--point-height) / 2 - var(--size) / 2);
+}
+.notActive p {
+  opacity: 0;
+}

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  --White: white;
 }
 
 .wrapper {
@@ -29,10 +30,15 @@
   transition: all 0.1s;
 }
 .point p {
+  color: var(--White, #fff);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   display: block;
   margin-left: var(--point-width);
   margin-top: calc(var(--point-height) / 2 - 0.6rem);
-  color: white;
   top: 20%;
   left: 50%;
 }
@@ -49,15 +55,15 @@
   background-position: calc(var(--point-height) / 2 - var(--size) / 2);
 }
 .active p {
-    opacity: 1;
+  opacity: 1;
 }
 .notActive {
-    --size: 20px;
-    width: var(--point-width);
-    background-image: url(./public/images/plus.svg);
-    background-size: var(--size);
-    background-repeat: no-repeat;
-    background-position: calc(var(--point-height) / 2 - var(--size) / 2);
+  --size: 20px;
+  width: var(--point-width);
+  background-image: url(./public/images/plus.svg);
+  background-size: var(--size);
+  background-repeat: no-repeat;
+  background-position: calc(var(--point-height) / 2 - var(--size) / 2);
 }
 .notActive p {
   opacity: 0;

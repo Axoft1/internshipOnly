@@ -65,7 +65,7 @@ map.onclick = function (e) {
   if (e.target.classList.contains("notActive")) {
     e.target.classList.remove("notActive");
     e.target.classList.add("active");
-    e.target.style.width = `calc(${e.target.innerText.length}rem / 2 + ${
+    e.target.style.width = `calc(${e.target.innerText.length}em / 2 + ${
       WIDTH + 16
     }px)`;
   } else if (e.target.classList.contains("active")) {

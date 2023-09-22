@@ -20,6 +20,11 @@
   width: 100%;
 }
 .point {
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   display: flex;
   position: absolute;
   box-sizing: border-box;
@@ -30,15 +35,10 @@
   transition: all 0.1s;
 }
 .point p {
-  color: var(--White, #fff);
-  font-family: Arial;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  color: var(--White, #fff);  
   display: block;
   margin-left: var(--point-width);
-  margin-top: calc(var(--point-height) / 2 - 0.6rem);
+  margin-top: calc(var(--point-height) / 2 - (1em / 1.8));
   top: 20%;
   left: 50%;
 }
